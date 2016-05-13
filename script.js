@@ -1,3 +1,6 @@
-$(document).ready(function(){
-	number = prompt("Please enter a number.");
+var input;
+
+$(document).ready(function() {
+	input = prompt("Enter a number.");
+ 
 });
