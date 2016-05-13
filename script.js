@@ -1,5 +1,7 @@
-var input;	 //This is going to be the variable
-			//that stores the user input.
+var input = +'';	 //This is going to be the variable
+			//that stores the user input. The +'' is
+			//placed there as instructed to convert
+			//prompt()'s value from string to number'
 
 var count = 1; 	 //This variable is a starting point
 				//counter that will count from 1 to input.
@@ -8,8 +10,10 @@ $(document).ready(function() {
     	//after the page loads, the bottom code will
        //store prompt()'s response in the input variable
        //and will add 1 to count until count is = to input.
-    for (input = prompt("Enter a number."); count <= input; count++) {
+    for (input = parseInt(prompt("Enter a number.")); count <= input; count++) {
     	var string = '';
+    	//parseInt only works a little. ex: 8r09 will cause
+    	//fizzbuzz to stop counting at 8 rather 809.
 
     	if (count % 3 == 0) {
     		string += 'fizz';
